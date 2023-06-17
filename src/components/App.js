@@ -96,13 +96,19 @@ const App = ({
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    repairs: state.items,
-    item: state.item,
-    editMode: state.editMode,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     repairs: state.items,
+//     item: state.item,
+//     editMode: state.editMode,
+//   };
+// };
+
+const mapStateToProps = (state) => ({
+  repairs: state.items, // Make sure the property name matches the reducer's state key
+  item: state.item,
+  editMode: state.editMode,
+});
 
 const mapDispatchToProps = {
   addRepair,
