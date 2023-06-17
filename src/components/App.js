@@ -9,14 +9,14 @@ import {
 } from '../actions';
 
 const App = ({
-  repairs,
-  editMode,
-  item,
-  addRepair,
-  removeRepair,
-  resolveRepair,
-  updateRepair,
-  editTask,
+  repairs= [],
+  editMode=false,
+  item={},
+  addRepair=() => {},
+  removeRepair=() => {},
+  resolveRepair=() => {},
+  updateRepair=() => {},
+  editTask=() => {},
 }) => {
   const [owner, setOwner] = useState('');
   const [model, setModel] = useState('');
